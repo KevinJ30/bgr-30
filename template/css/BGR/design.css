@@ -1,0 +1,182 @@
+/**
+ * ------ CLass pré-definit -------
+ **/
+
+/* Definit la taille du block (70% de la page) 
+ * et le centre au milleu de sont parent */
+.row
+{
+	width:70%;
+	height:100%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+/**
+ * -------------- END -------------
+ **/
+
+html, body
+{
+	margin:0;
+	padding:0;
+}
+
+body
+{
+	margin:0;
+	padding:0;
+	min-width:900px;
+	background-color:#02b0e6;
+}
+
+#main
+{
+	width:70%; 
+	margin-left:auto; 
+	margin-right:auto;
+	border:2px solid #ffffff;
+	border-top:none;
+}
+
+/* Redéfinie la taille des pannelBox pour le bgr */
+.pannel-box
+{
+	width:70%;
+	margin-left:auto;
+	margin-right: auto;
+}
+
+/* ------------------------- HEADER --------------------------------- */
+
+header
+{
+	height:200px;
+	overflow: hidden;
+	background-image:url('../../img/design/header.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color:#02b0e6;
+}
+
+/* ------------------------- END ----------------------------------- */
+
+/* ------------------------- NAV-BAR --------------------------------- */
+nav
+{
+	width:100%;
+	line-height:42px;
+
+	overflow: hidden; /* Permet d'éviter les bugs avec les floats */
+
+	border-top:2px #ffffff solid;
+	border-bottom:2px #dedede solid;
+	background: url('../../img/design/menu.png')repeat-x;
+}
+
+nav ul
+{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+nav ul li.bouton
+{
+	margin-right:10px;
+	padding-right:16px;
+
+	float:left;
+
+	background: url('../../img/icones/fleche_bas.png')no-repeat center right;
+}
+
+nav ul li.bouton:hover
+{
+	background: url('../../img/icones/fleche_bas_focus.png')no-repeat center right;	
+}
+
+nav ul li.bouton a
+{
+	padding-left:5px;
+	padding-right:5px;
+	display:block;
+}
+
+nav ul.sous-menu
+{
+	position: absolute;
+	display:none; /* Valeur changé avec JQuery */
+	z-index:1;
+	opacity:0.9;
+	background-color:#dedede;
+}
+
+nav ul.sous-menu li a
+{
+	display:block;
+}
+
+nav ul.sous-menu > li
+{
+	padding:5px;
+	line-height: normal;
+}
+
+/* ------------------------- END ----------------------------------- */
+
+/* ------------------------- Content --------------------------------- */
+#content{padding:10px; overflow: auto; background-color:#FFFFFF;}
+
+article
+{
+	margin-top:5px;
+	margin-bottom:10px;
+}
+
+
+article h1 small
+{
+	display:block;
+	font-size: 0.6em;
+	color:#0261af;
+}
+
+article div.bouton-suite
+{
+	display:block;
+	margin:0;
+	padding:5px;
+
+	font-family: 'almendra', serif;
+	text-align: right;
+}
+
+/* ------------------------- END ----------------------------------- */
+/* ------------------------- FOOTER --------------------------------- */
+
+footer
+{
+	padding:10px;
+	font-size: 0.7em;
+
+	background-color:#dedede;
+	border-top:2px #bbbbbb solid;
+}
+
+footer ul
+{
+	margin:0;
+	overflow: hidden;
+	list-style-position: inside;
+	font-size: 1.1em;
+}
+
+footer ul li
+{
+	margin-right: 20px;
+	float:left;
+}
+
+/* ------------------------- END ----------------------------------- */

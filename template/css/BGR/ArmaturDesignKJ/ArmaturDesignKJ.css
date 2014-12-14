@@ -1,0 +1,462 @@
+/**
+ * File : css/cssGenerale
+ *
+ * Crée par Kevin Joudrier le 01/09/2014
+ *
+ * Réintialise le css standart pour le configurer
+ **/
+
+/* ---------- RESET CSS --------------- */
+
+/* On importe le fichier agenda.css */
+@import url('agenda.css');
+
+/**
+ * Configuration des polices
+ **/
+@font-face {
+    font-family: 'almendra';
+    src: url('font/almendra-regular-webfont.eot');
+    src: url('font/almendra-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/almendra-regular-webfont.woff2') format('woff2'),
+         url('font/almendra-regular-webfont.woff') format('woff'),
+         url('font/almendra-regular-webfont.ttf') format('truetype'),
+         url('font/almendra-regular-webfont.svg#almendraregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'chivo';
+    src: url('font/chivo-regular-webfont.eot');
+    src: url('font/chivo-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/chivo-regular-webfont.woff2') format('woff2'),
+         url('font/chivo-regular-webfont.woff') format('woff'),
+         url('font/chivo-regular-webfont.ttf') format('truetype'),
+         url('font/chivo-regular-webfont.svg#chivoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/** ---------------- END -----------**/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* ---------- END --------------------- */
+
+/**
+ * Class Générale
+ **/
+
+.alignCenter
+{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignLeft
+{
+	float:left;
+	margin-right: 20px;
+}
+
+.alignRight
+{
+	float:right;
+	margin-right: 20px;
+}
+
+.error-message
+{
+	color:#ff3333;
+}
+
+.form-error
+{
+	background-color:#ffbebe;
+	border-color:#ff3333;
+}
+
+.clear-both
+{
+	content:" ";
+	clear:both;
+}
+/**
+ * ----------- END --------------
+ **/
+
+body
+{
+	font-family: 'chivo', sans-serif;
+	font-size:16px;
+	line-height: 1.5em;
+	/*background-image: -webkit-linear-gradient(top, #ffffff, #ffffff 98%, #000000 100%); /* Permet de m'afficher la hauteur des ligne */
+	background-size:1.5em 1.5em;
+	background-position: 0 -5px;
+	color:#7a7a7a;
+}
+
+p, ul, ol, blockquote{margin-bottom: 1.5em;}
+h1, h2, h3, h4, h5, h6{margin-bottom: 24px; color:#333; font-family: 'almendra', serif;}
+
+h1{font-size: 1.5em; border-bottom:1px solid black;}
+h2{font-size: 1.325em;   color:#0261af;}
+h3{font-size: 1.25em;    color:#0071cd;}
+h4{font-size: 1.125em;   color:#0079dd;}
+h5, h6{font-size: 1.0em; color:#007fe8;}
+
+ul, ol{margin-left:20px;}
+ul{list-style: square inside;}
+ol{list-style: decimal inside;}
+ul ul, ol ul{list-style:circle inside; margin-bottom: 0px;}
+ol ol, ul ol{list-style:decimal inside; margin-bottom: 0px;}
+
+a{color:#0261af;}
+a:hover{color:#4085bd;}
+
+strong
+{
+	font-weight: bold;
+}
+
+small
+{
+	font-size: 0.8em;
+	font-family: 'almendra', serif;
+}
+
+p
+{
+	text-align: justify;
+}
+
+blockquote
+{
+	margin-left:60px;
+	margin-right:45px;
+	border-left:5px solid #0261af;
+	padding-left:15px;
+	font-style: italic;
+	font-family: 'almendra', serif;
+}
+
+blockquote em
+{
+	display:block;
+	text-align: right;
+	font-family: 'chivo', sans-serif;
+	font-style: normal;
+}
+
+blockquote em:before
+{
+	content:'— ';
+}
+
+table {
+	width:100%;
+	border-collapse: collapse;
+}
+
+table p, table, form, table input
+{
+	margin:0;
+	padding:0;
+	line-height: normal;
+}
+
+table th{
+	font-weight: bold;
+	border-bottom:1px solid #ddd;
+}
+
+table td
+{
+	background-color:#f0f0f0;
+	border-bottom:1px solid #ddd;
+}
+
+table th
+{
+	font-family: 'almendra', serif;
+	font-weight: bold;
+	color:#0261af;
+	font-style: italic;
+}
+
+tbody{border-bottom:1px solid black;}
+tbody tr{background-color:#fff;}
+tbody tr.alt-row{background-color: #f3f3f3;}
+table td, table th{padding:10px; line-height:1.3em;}
+table th, table  td{text-align: center;}
+
+/**
+ * --------------- PANNEL BOX ---------------
+ **/
+.pannel-box
+{
+	margin-bottom:1.5em;
+
+	padding-bottom: 20px;
+
+	position:relative;
+	display:block;
+
+	font-family:'almendra', serif;
+	font-weight:normal;
+	text-align:justify;
+
+	transition: opacity 300ms ease-out;
+	border:1px solid #0078a0;
+	color:white;
+	background-color:#008cba;}
+	.pannel-box p
+	{
+		margin:0;
+		padding:0;
+		padding-top: 20px;
+		margin-left:10px;
+		display:block;}
+
+	.pannel-box .close
+	{
+		font-size:1.2em;
+		font-family:'chivo', sans-serif;
+		font-weight:bold;
+
+		text-decoration:none;
+
+		padding:9px 0px 4px;
+		line-height:0;
+		position:absolute;
+		top:50%;
+		margin-top:-0.6875em;
+		right:0.25em;
+		color:#333333;
+		opacity:0.3;}
+		.pannel-box .close:hover, .pannel-box .close:focus{opacity:0.5}
+.pannel-box.info
+{
+	color:white;
+	border-color:#0078a0;
+	background:url('img/icones/notif-info2.png')no-repeat;
+	background-position:10px center;
+	background-color:#008cba;}
+.pannel-box.success
+{
+	color:white;
+	border-color: #3a945b;
+	background:url('img/icones/notif-success2.png')no-repeat;
+	background-position:10px center;
+	background-color: #43ac6a;}
+.pannel-box.warning
+{
+	border-color: #de770f;
+	background:url('img/icones/notif-warning2.png')no-repeat;
+	background-position:10px center;
+	background-color: #f08a24;}
+.pannel-box.error
+{
+	color:white;
+	border-color: #de2d0f;
+	background:url('img/icones/notif-error2.png')no-repeat;
+	background-position:10px center;
+	background-color: #f04124;}
+	.pannel-box.info p, .pannel-box.success p, .pannel-box.warning p, .pannel-box.error p{
+		padding-left:60px;}
+/* ----------------- END ------------------*/
+
+/**
+ * -------------- BLOCK PREFIXER ---------------
+ **/
+
+.large-1{width:8.33%;}
+.large-2{width:16.66%;}
+.large-3{width:25%;}
+.large-4{width:33.33%;}
+.large-5{width:41.66%;}
+.large-6{width:50%;}
+.large-7{width:58.32%;}
+.large-8{width:66.65%;}
+.large-9{width:75%;}
+.large-10{width:83.31%;}
+.large-11{width:91.64%;}
+.large-12{width:100%;}
+ /* -------------- END ---------------------------*/
+
+/**
+ * ------------- Standart design Form ----------
+ **/
+/* Form */
+form div
+{
+	margin:0;
+	padding:0;
+	margin-bottom:1.5em;
+}
+
+form label
+{
+	margin:0;
+	padding:0;
+}
+
+/* Label styles */
+fieldset
+{
+	border:1px solid #dddddd;
+	padding:1.25em;
+	margin-bottom: 1.5em}
+	fieldset fieldset{
+		margin-top:1.5em;}
+	fieldset legend
+	{
+		font-weight: bold;
+		font-family: "almendra", serif;
+		background:white;
+		padding:0 0.18em;
+		margin:0;
+		margin-left:-0.18em;
+	}
+
+label
+{
+	font-size:0.9em;
+	color:#4d4d4d;
+	cursor:pointer;
+	display:block;
+	font-weight: normal;
+	font-family:"chivo", sans-serif;}
+	label.error{color:#ff3333;}
+/* ----------- input --*/
+
+input, button.site, select
+{
+	width:100%;
+	color:#7a7a7a;
+	background-color:white;
+	font-family: "almendra", serif;
+	border:1px solid #cccccc;
+	display:block;
+	height:2em;}
+	input.error{background-color:#ff7171; border-color:#ff3333;}
+	input:focus, textarea:focus
+	{
+		border-color:#999999;
+		background-color:#fafafa;
+		outline: none;
+	}
+	input[disabled="disabled"]{background-color:#e6e6e6;}
+	input[type="submit"], button.site
+	{
+		width:inherit;
+		border-style:solid;
+		cursor: pointer;
+		font-family: "chivo", "Helvetica", sans-serif;
+		font-weight: normal;
+		text-decoration: none;
+		text-align: center;
+		display:block;
+		border-radius:3px;
+		background-color:#008cba;
+		border-color:#007095;
+		color:white;}
+		input[type="submit"]:hover, input[type="submit"].selected, input[type="submit"]:focus, button:hover, button.selected, button:focus{
+		background-color:#007095;
+		color:white;}
+		input[type="submit"].vert, button.vert{background-color:#3a945b; border-color:#3a945b;}
+		input[type="submit"].vert:hover, input[type="submit"].vert.selected, input[type="submit"].vert:hover, button:hover.vert, button.vert.selected, button:focus.vert{background-color:#43ac6a; border-color:#3a945b;}
+		input[type="submit"].orange, button.orange{background-color:#de770f; border-color:#de770f;}
+		input[type="submit"].orange:hover, input[type="submit"].orange.selected, input[type="submit"].orange:hover, button:hover.orange, button.orange.selected, button:focus.orange{background-color:#f08a24; border-color:#de770f;}
+		input[type="submit"].rouge, button.rouge{background-color:#de2d0f; border-color:#de2d0f;}
+		input[type="submit"].rouge:hover, input[type="submit"].rouge.selected, button:hover.rouge, button.rouge.selected, button:focus.rouge{background-color:#f04124; border-color:#de2d0f;}
+	input[type="radio"]{
+		width:inherit;
+		height:inherit;
+		display:inline;}
+	input[type="checkbox"]{
+		width:inherit;
+		height:inherit;
+		display:inline;}
+	input[type="file"]
+	{
+		border:none;
+		width:inherit;
+	}
+.input-row
+{
+	float: left;
+	margin-right:5px;
+}
+
+/* Les bouton qui sont contenu dans les les lien */
+a.button
+{
+	text-decoration:none;
+}
+
+div.radio label{
+	margin-bottom: 0;}
+div.checkbox label{
+	margin-bottom: 0;}
+	
+#paginator
+{
+	width:100%;
+	text-align:center;
+	
+	font-family:"almendra";
+	
+	background-color:#f0f0f0;
+}
+
+#paginator a
+{
+	display:inline-block;
+}
+
+/**
+ * Les diférent bouton
+ **/
+
+ /* ------------------------- END --------------*/

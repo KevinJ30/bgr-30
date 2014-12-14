@@ -1,0 +1,105 @@
+/* Definit la taille du block (70% de la page) 
+ * et le centre au milleu de sont parent */
+.row-agenda
+{
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#left-bar
+{
+	width:25%;
+	float:left;
+	margin-right:1.5em;
+	font-size:0.9em;
+}
+
+#left-bar .content-left_bar
+{
+	margin-bottom: 1.5em;
+}
+
+#left-bar .no-marge
+{
+	margin-bottom:0;
+}
+
+#left-bar .content-left_bar .content
+{
+	padding:5px;
+}
+
+#left-bar .content-left_bar .title
+{
+	padding:5px;
+	text-align:left;
+	background-color:#008cba;
+        border:1px solid #007095;
+        color:#fff;
+        font-family: "Almendra";
+        font-weight:bold;
+        text-transform: uppercase;
+        text-align: center;
+}
+
+#content-agenda
+{
+	width:70%;
+	overflow: hidden;
+}
+
+#content-agenda .block-agenda
+{
+    padding:10px;
+    font-family: "chivo", sans-serif;
+}
+
+#content-agenda .block-agenda p
+{
+	margin:0;
+	padding:0;
+}
+
+#content-agenda .block-agenda strong
+{
+    color:#008cba;
+    font-family:"almendra", serif;
+}
+
+#content-agenda .block-agenda
+{
+	border: 1px solid black;
+	margin-bottom:5px;
+}
+
+#calendrier
+{
+    font-family: "chivo", sans-serif;
+    font-weight: bold;
+}
+
+#calendrier td
+{
+    height: 15px;
+}
+
+#calendrier td.selected
+{
+    background-color:#007095;
+    color:#fff;
+}
+
+#calendrier td.evenement
+{
+    text-decoration:underline;
+}
+
+#calendrier td.disabled
+{
+    background-color:#D4D4D4;
+}
+
+
+
+
