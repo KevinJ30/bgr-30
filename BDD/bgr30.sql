@@ -259,14 +259,6 @@ CREATE TABLE IF NOT EXISTS `users` (
   KEY `licence` (`licence`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=50 ;
 
---
--- Contenu de la table `users`
---
-
-INSERT INTO `users` (`id`, `username`, `password`, `tmp_password`, `nom`, `prenom`, `mail`, `licence`, `created`, `permission`, `active`, `banned`, `avatar`, `type_token`, `token`) VALUES
-(26, 'patricks', '9d85c7b1a73232b326860da3eb2eedc54d250038', NULL, 'Joudrier', 'patrick', 'kev.joudrier@gmail.com', '550061', '2014-10-16', 'membre', 1, 0, NULL, NULL, NULL),
-(49, 'KevinJ30', 'bffdb794723a8ddec6aa84090560fd2765736ee1', NULL, 'Joudrier', 'Kevin', '', NULL, '2014-10-24', 'admin', 1, 0, NULL, NULL, NULL);
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
