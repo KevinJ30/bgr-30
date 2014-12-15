@@ -191,7 +191,7 @@
 		// Détermine que la chaine soit au format alphanumeric
 		public function alphaNumeric($chaine)
 		{
-			$regex = "#^[a-zA-Z0-9éàèù\' _-]+$#";
+			$regex = "#^[a-zA-Z0-9éàèùîûêâç\'\,\.\!\?\^ -_.]+$#";
 
 			if(preg_match($regex, $chaine['value']))
 			{
@@ -315,6 +315,22 @@
 			}
 		}
 
+
+		// Test si le champ est au format numéro de téléphone
+		public function phone($chaine)
+		{
+
+			$regex = "#^0[0-9 -_.][0-9 -_.]{8}#";
+			
+			if(preg_match($regex, $chaine['value']))
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
 
 		/**
 		 * ------------------ END regle de validation ----------------

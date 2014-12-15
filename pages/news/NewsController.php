@@ -137,9 +137,9 @@
 						'status' => $_POST['status'],
 						'users_id'  => $_SESSION['auth']['id']	
 					));
-					
-					header('Location: '.URL_PAGES.'news/index.php?function=admin_index', 'alertSuccess');
+
 					session_deleteKey('token');
+					header('Location: '.URL_PAGES.'news/index.php?function=admin_index');
 					die();
 				}	
 			}

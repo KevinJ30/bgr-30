@@ -37,6 +37,14 @@
             	$EventsController->admin_add($_GET['token']);
             break;
 
+            case "admin_edit" :
+            	$EventsController->admin_edit($_GET['id'], $_GET['token']);
+            break;
+
+            case "admin_delete" :
+            	$EventsController->admin_delete($_GET['id'], $_GET['token']);
+            break;
+
             default :
             	header('Location:'.URL_ROOT.'index.php');
             	session_setFlash("La page n'xiste pas.", "alertError");

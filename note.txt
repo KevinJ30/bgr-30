@@ -1,0 +1,3 @@
+- Ajouts d'une regex pour le numéro de téléphone
+- Modification de la regex alphanumerique pour qu'elle accépte les virgule, tirêt du 6 et la ponctuation.
+- Ajout d'une fonction (add($donnees = array())) dans l'events model qui permet d'ajouter un événment dans la base de données .

@@ -188,4 +188,100 @@ class EventsModel extends Model
 
 		return $events;
 	}
+
+	/**
+	 * add
+	 *
+	 * @param : $donnees : contient les données à rentrer dans la base de données
+	 *
+	 **/
+	public function add($donnees = array())
+	{
+
+		// Connection à la base de données
+		$this->connect();
+
+		// requête
+		$req = $this->bdd->prepare("INSERT INTO events(title, date_start, date_end, heure_start, heure_end, description, lieu, category_id, contact, adresse, mail, phone, actif) VALUES(:title, :date_start, :date_end, :heure_start, :heure_end, :description, :lieu, :category_id, :contact, :adresse, :mail, :phone, :actif)");
+
+		$req->execute($donnees) or die(print_r($req->errorInfo()));
+
+		$req->closeCursor();
+
+		return false;
+	}
+
+	/**
+	 * first
+	 *
+	 * Permet de recherché un événement par son id
+	 *
+	 * @param $id : id de l'event
+	 * @return retourne l'événement
+	 **/
+	public function first($id)
+	{
+
+		// Connection à la base de données
+		$this->connect();
+
+		// Requête
+		$req = $this->bdd->prepare("SELECT title, date_start, date_end, DATE_FORMAT(heure_start, '%h:%m') as heure_start, DATE_FORMAT(heure_end, '%h:%m') as heure_end, description, lieu, category_id, contact, adresse, mail, phone, actif FROM events WHERE id=:id");
+
+		$req->execute(array(
+			'id' => $id
+		));
+
+		$event = $req->fetch(PDO::FETCH_OBJ);
+
+		$req->closeCursor();
+
+		return $event;
+	}
+
+	/**
+	 * delete
+	 *
+	 * Permet de supprimer un event dans la base de données
+	 *
+	 * @param : $id : id de l'évent
+	 **/
+	public function delete($id)
+	{
+
+		// Connection à la base de donnée
+		$this->connect();
+
+		// Requête
+		$req = $this->bdd->prepare("DELETE FROM events WHERE id=:id");
+
+		$req->execute(array(
+			'id' => $id
+		)) or die(print_r($req->errorInfo()));
+
+		$req->closeCursor();
+		return false;
+	}
+
+	/**
+	 * edit
+	 *
+	 * permet d'édité un événement
+	 *
+	 * @param : $donnees : contient le tableaux avec les données modifier
+	 **/
+	public function edit($donnees = array())
+	{
+		//debug($donnees);
+		// Connection à la base de données
+		$this->connect();
+
+		// Requête
+		$req = $this->bdd->prepare("UPDATE events SET title=:title, date_start=:date_start, date_end=:date_end, heure_start=:heure_start, heure_end=:heure_end, description=:description, lieu=:lieu, category_id=:categories, contact=:contact, adresse=:adresse, mail=:mail, phone=:phone, actif=:actif WHERE id=:id");
+
+		$req->execute($donnees) or die(print_r($req->errorInfo()));
+
+		$req->closeCursor();
+		return false;
+	}
 }

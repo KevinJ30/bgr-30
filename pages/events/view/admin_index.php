@@ -25,8 +25,8 @@
 					<th>Date de fin</th>
 					<th>Heure de début</th>
 					<th>Heure de fin</th>
-					<th>Status</th>
 					<th>Categorie</th>
+					<th>Status</th>
 					<th>Supprimer</th>
 					<th>Editer</th>
 				</tr>
