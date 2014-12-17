@@ -4,7 +4,7 @@ bgr-30
 Site crée pour le Badminton Gard Rhodanien
 
 Le site contient un système de pages, news et un système d'événement. Le site contient également,
-un back-office pour les pages, les news, les événement.
+un back-office pour les pages, les news, les événements.
 
 Ce fichier la sera remis à jour à chaque version.
 
